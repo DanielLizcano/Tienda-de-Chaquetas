@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Tipo de Registro</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		
+		<style>
+			
+			form {
+	            max-width: 400px;
+	            margin: 0 auto;
+	            background: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para resaltar el formulario */
+	            padding: 20px;
+	            margin-top: 50px;
+	            border-radius: 10px;
+        	}
+        
+			.form-group {
+            	margin-bottom: 20px;
+            	display: grid;
+        	}
+
+	        label {
+	            color: #fff; /* Color del texto del label */
+	            width: 100%;
+	            text-align: center;
+	        }
+	
+	        .btn-primary {
+	            background-color: #343a40; /* Gris oscuro */
+	            border-color: #343a40;
+	        }
+	
+	        .btn-primary:hover {
+	            background-color: #1d2124; /* Gris más oscuro al pasar el ratón por encima */
+	            border-color: #1d2124;
+	        }
+		</style>
+	</head>
+	
+	<body>
+		<label>Tipo de Registro</label>
+		<hr>
+		<form method="post" th:action="@{/formularios/registro(tipo='vendedor')}">
+			<div class="form-group">
+            	<button class="btn btn-primary" type="submit">Usuario Vendedor</button>
+        	</div>
+		</form>
+		<form method="post" th:action="@{/formularios/registro(tipo='comprador')}">
+			<div class="form-group">
+            	<button class="btn btn-primary" type="submit">Usuario Comprador</button>
+        	</div>
+		</form>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+	</body>
+</html>
